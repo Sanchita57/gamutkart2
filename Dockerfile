@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+EXPOSE 8080
 LABEL MAINTAINER="sanchitamahant@gmail.com"
 RUN apt-get update
 RUN apt-get install -y openjdk-11-jdk
