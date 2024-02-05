@@ -7,7 +7,7 @@ do
 	echo "=============================="
     echo "Creating tomcat-server$i container.."
     sleep 1
-    docker run -it -d --name t-s$i gamutkart2:example-web-img
+    docker run -it -d --name t-s$i gamutkart2:example-web-img 
     echo "tomcat-server$i container has been created!"
 	echo "=============================="
 done
