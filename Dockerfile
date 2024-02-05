@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-EXPOSE 9000
 LABEL MAINTAINER="sanchitamahant@gmail.com"
 RUN apt-get update
 RUN apt-get install -y openjdk-11-jdk
