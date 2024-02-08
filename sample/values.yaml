@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: fisdemo.jfrog.io/docker/gamutkart2
+  repository: chocky/gamutkart
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "111"
+  tag: "35"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -40,8 +40,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
-  port: 80
+  type: LoadBalancer
+  port: 8080
 
 ingress:
   enabled: false
@@ -71,14 +71,14 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
+#livenessProbe:
+ # httpGet:
+  #  path: /
+   # port: http
+#readinessProbe:
+#  httpGet:
+ #   path: /
+  #  port: http
 
 autoscaling:
   enabled: false
